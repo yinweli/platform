@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7B923039-7675-4920-881F-5D8931F18295}</ProjectGuid>
+    <RootNamespace>libplatform</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>_debug\</OutDir>
+    <IntDir>_debug\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>_release\</OutDir>
+    <IntDir>_release\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalUsingDirectories>$(SolutionDir)libcsnstandard\bin\$(Configuration);$(SolutionDir)libsetup\bin\$(Configuration);%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>lib\platform_debug.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalUsingDirectories>$(SolutionDir)libcsnstandard\bin\$(Configuration);$(SolutionDir)libsetup\bin\$(Configuration);%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <AssemblerOutput />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>lib\platform_release.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="source\cstring.h" />
+    <ClInclude Include="source\safe.h" />
+    <ClInclude Include="source\platform.h" />
+    <ClInclude Include="source\bmdata.h" />
+    <ClInclude Include="source\command.h" />
+    <ClInclude Include="source\component.h" />
+    <ClInclude Include="source\control.h" />
+    <ClInclude Include="source\database.h" />
+    <ClInclude Include="source\dbf.h" />
+    <ClInclude Include="source\event.h" />
+    <ClInclude Include="source\handle.h" />
+    <ClInclude Include="source\network.h" />
+    <ClInclude Include="source\output.h" />
+    <ClInclude Include="source\packet.h" />
+    <ClInclude Include="source\record.h" />
+    <ClInclude Include="source\server.h" />
+    <ClInclude Include="source\obj.h" />
+    <ClInclude Include="source\objbenchmark.h" />
+    <ClInclude Include="source\objcommand.h" />
+    <ClInclude Include="source\objcomponent.h" />
+    <ClInclude Include="source\objdatabase.h" />
+    <ClInclude Include="source\objdbf.h" />
+    <ClInclude Include="source\objevent.h" />
+    <ClInclude Include="source\objhandle.h" />
+    <ClInclude Include="source\objnetwork.h" />
+    <ClInclude Include="source\objoutput.h" />
+    <ClInclude Include="source\objpacket.h" />
+    <ClInclude Include="source\_include.h" />
+    <ClInclude Include="source\define.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\platform.cpp" />
+    <ClCompile Include="source\bmdata.cpp" />
+    <ClCompile Include="source\command.cpp" />
+    <ClCompile Include="source\component.cpp" />
+    <ClCompile Include="source\control.cpp" />
+    <ClCompile Include="source\database.cpp" />
+    <ClCompile Include="source\dbf.cpp" />
+    <ClCompile Include="source\event.cpp" />
+    <ClCompile Include="source\handle.cpp" />
+    <ClCompile Include="source\network.cpp" />
+    <ClCompile Include="source\output.cpp" />
+    <ClCompile Include="source\packet.cpp" />
+    <ClCompile Include="source\record.cpp" />
+    <ClCompile Include="source\server.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libcsnstandard\libcsnstandard.csproj">
+      <Project>{e2cfb90e-5d2d-4874-bef0-2818f643847a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libnonstandard\libnonstandard.vcxproj">
+      <Project>{d570e79f-138a-4d90-bccc-9d9663e9efa8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libsetup\libsetup.csproj">
+      <Project>{8f743529-a12d-41c2-9b70-e87bbef665b7}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

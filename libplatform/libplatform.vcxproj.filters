@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="0.misc">
+      <UniqueIdentifier>{1b339b65-b8cd-4580-99c6-497e66a07a3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.platform">
+      <UniqueIdentifier>{d0b99243-2187-4ed3-b29f-ad79c48b177a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1.kernal">
+      <UniqueIdentifier>{459af4f3-2dc9-4e51-bc31-9357df3a6df3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3.object">
+      <UniqueIdentifier>{6f13e692-fb1a-4eba-8fed-e1850693ab9c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\cstring.h">
+      <Filter>0.misc</Filter>
+    </ClInclude>
+    <ClInclude Include="source\safe.h">
+      <Filter>0.misc</Filter>
+    </ClInclude>
+    <ClInclude Include="source\platform.h">
+      <Filter>2.platform</Filter>
+    </ClInclude>
+    <ClInclude Include="source\bmdata.h">
+      <Filter>1.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\command.h">
+      <Filter>1.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\component.h">
+      <Filter>1.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\control.h">
+      <Filter>1.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\database.h">
+      <Filter>1.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\dbf.h">
+      <Filter>1.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\event.h">
+      <Filter>1.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\handle.h">
+      <Filter>1.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\network.h">
+      <Filter>1.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\output.h">
+      <Filter>1.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\packet.h">
+      <Filter>1.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\record.h">
+      <Filter>1.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\server.h">
+      <Filter>1.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\obj.h">
+      <Filter>3.object</Filter>
+    </ClInclude>
+    <ClInclude Include="source\objbenchmark.h">
+      <Filter>3.object</Filter>
+    </ClInclude>
+    <ClInclude Include="source\objcommand.h">
+      <Filter>3.object</Filter>
+    </ClInclude>
+    <ClInclude Include="source\objcomponent.h">
+      <Filter>3.object</Filter>
+    </ClInclude>
+    <ClInclude Include="source\objdatabase.h">
+      <Filter>3.object</Filter>
+    </ClInclude>
+    <ClInclude Include="source\objdbf.h">
+      <Filter>3.object</Filter>
+    </ClInclude>
+    <ClInclude Include="source\objevent.h">
+      <Filter>3.object</Filter>
+    </ClInclude>
+    <ClInclude Include="source\objhandle.h">
+      <Filter>3.object</Filter>
+    </ClInclude>
+    <ClInclude Include="source\objnetwork.h">
+      <Filter>3.object</Filter>
+    </ClInclude>
+    <ClInclude Include="source\objoutput.h">
+      <Filter>3.object</Filter>
+    </ClInclude>
+    <ClInclude Include="source\objpacket.h">
+      <Filter>3.object</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_include.h" />
+    <ClInclude Include="source\define.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\platform.cpp">
+      <Filter>2.platform</Filter>
+    </ClCompile>
+    <ClCompile Include="source\bmdata.cpp">
+      <Filter>1.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\command.cpp">
+      <Filter>1.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\component.cpp">
+      <Filter>1.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\control.cpp">
+      <Filter>1.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\database.cpp">
+      <Filter>1.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\dbf.cpp">
+      <Filter>1.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\event.cpp">
+      <Filter>1.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\handle.cpp">
+      <Filter>1.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\network.cpp">
+      <Filter>1.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\output.cpp">
+      <Filter>1.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\packet.cpp">
+      <Filter>1.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\record.cpp">
+      <Filter>1.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\server.cpp">
+      <Filter>1.kernal</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

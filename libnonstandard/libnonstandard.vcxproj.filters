@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="_nstd">
+      <UniqueIdentifier>{941ff9bc-eb98-421e-95ad-881414a27805}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="memoryleak">
+      <UniqueIdentifier>{2ac70f38-3c28-4824-ae2c-e33c1170e9fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_nstring">
+      <UniqueIdentifier>{8955fefa-9124-47fb-abcf-7681fb5f9133}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="actualkeycodes">
+      <UniqueIdentifier>{81797c0c-60b1-4eaa-8869-607487f6cc2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algorithm">
+      <UniqueIdentifier>{e30270e0-5f33-43f9-a376-a5d31e1423f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="benchmark">
+      <UniqueIdentifier>{9c2f3345-774d-4dda-9d30-4e84bcce514a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bittool">
+      <UniqueIdentifier>{0bf6a034-b671-47ad-8452-0d4947634c29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="callfunclog">
+      <UniqueIdentifier>{b2062f76-ecf4-47f2-90ed-609215c7f1e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="comtool">
+      <UniqueIdentifier>{2d4d182b-111e-4b0f-b0a9-623f19bd8526}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="consoletool">
+      <UniqueIdentifier>{4217a1d1-97e7-4513-b2d2-e0f32f1c3337}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dbmssql">
+      <UniqueIdentifier>{6595056b-3e6c-4f32-88f2-d8a117e81dad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dbsqlite">
+      <UniqueIdentifier>{8b4bd6ac-b4bf-4f78-beed-e797d0dd6228}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dbstore">
+      <UniqueIdentifier>{c25b8799-fdfa-4497-a00e-cf91a34e8954}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="debugtool">
+      <UniqueIdentifier>{954048e4-da20-4412-b3b1-d5e7b39fd59d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="filetool">
+      <UniqueIdentifier>{ad0237ac-2982-4530-b413-70325da7719d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="flagcontrol">
+      <UniqueIdentifier>{fe0f66ed-bb8a-430b-8cb3-b1187c902516}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="flowrecord">
+      <UniqueIdentifier>{484f0886-0b32-4b53-8f7b-4798df8ffc60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inifile">
+      <UniqueIdentifier>{63029059-41f8-4c8c-b3f4-163fc670f8ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mathtool">
+      <UniqueIdentifier>{cde5704e-f08f-4a1f-be2f-91ed41d811c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="memorytool">
+      <UniqueIdentifier>{66141106-c862-452d-b826-409a67abd862}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="progress">
+      <UniqueIdentifier>{6c8761f8-4560-43be-8baa-927d4e2dfc04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systemtool">
+      <UniqueIdentifier>{8693bffc-bd8a-4d70-9413-550f116799cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="threadlock">
+      <UniqueIdentifier>{9913c35e-9f2f-45d8-8883-33be9921ae36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="threadobj">
+      <UniqueIdentifier>{e3d9b02e-481a-4b4b-a127-8be91b1f7596}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="whandle">
+      <UniqueIdentifier>{374adc40-f0b7-4f4f-9dc3-41ffd730800a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windowstool">
+      <UniqueIdentifier>{c73404ef-ccc7-457a-8cf1-d1324b2f6aba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windowstool\heaplist">
+      <UniqueIdentifier>{0dc6e17d-ecbf-4b0f-bb4e-f60a27b58975}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windowstool\modulelist">
+      <UniqueIdentifier>{9785fce1-c904-4337-98b2-268f782bf47b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windowstool\proclist">
+      <UniqueIdentifier>{a7d6b2ed-a5a7-4fc6-a882-bb2f1b03f464}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windowstool\threadlist">
+      <UniqueIdentifier>{df72c9f9-a128-4087-adff-bb600b4a97f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windowstool\winlist">
+      <UniqueIdentifier>{ea1a498f-b40f-437a-a6d0-eb5f4de20b1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="json">
+      <UniqueIdentifier>{65697050-278b-4092-9a7c-a0f76586928f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="console">
+      <UniqueIdentifier>{808ec072-cbf2-4f7c-ac7b-d30867969efb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="consoleargv">
+      <UniqueIdentifier>{0f3c81ba-abae-46a3-bc04-3971b094a60a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taskinterval">
+      <UniqueIdentifier>{90d9d551-a551-4648-bdf9-1aaa5dadb78b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taskschedule">
+      <UniqueIdentifier>{1dbc11d4-bd05-4760-b152-ca1f32dcbeab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xsocket">
+      <UniqueIdentifier>{0ec88efa-a807-4bd3-88a3-c298fd057c51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xsocket\0.kernal">
+      <UniqueIdentifier>{c29a04e5-c3b4-43e4-8a68-8b3b6405dab0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xsocket\1.server">
+      <UniqueIdentifier>{0108c3e7-cfff-4bdc-b188-5d6cbf72e537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xsocket\2.client">
+      <UniqueIdentifier>{288c8761-76ba-4ca3-ab82-1bc8658dd8de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ipdata">
+      <UniqueIdentifier>{8471fb21-e363-4f97-af1d-285d7c4e002b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="argument">
+      <UniqueIdentifier>{2e33c31c-3e21-4eb9-8ac3-9c79df122faf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_nstderr">
+      <UniqueIdentifier>{6924c5e0-cf43-40ae-a058-4b969b843dbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dbmysql">
+      <UniqueIdentifier>{196cf351-ae7e-4aca-8d26-bf62141e5712}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="curl">
+      <UniqueIdentifier>{7e26dfda-7a3c-4758-a037-7e39a9e96092}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xmlstring">
+      <UniqueIdentifier>{4766d32f-0817-4b3e-8ac7-e978d54b92c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dbase">
+      <UniqueIdentifier>{8f841d63-f71a-4032-8e27-c9029f2bd34c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_ntime">
+      <UniqueIdentifier>{ec972abb-54a1-46ac-b6ec-c7ead41848e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base64">
+      <UniqueIdentifier>{830d6a53-2c68-4dad-8e44-991ea8a8f36b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crashrpt">
+      <UniqueIdentifier>{1e4a756a-349d-4f13-8ad0-56ca93d25796}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="formtable">
+      <UniqueIdentifier>{c4b406ad-dd9f-4b2d-aeeb-f7ca0d2fd5ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hashx">
+      <UniqueIdentifier>{88acf71d-ae47-4bc4-a2e7-01e4149cbca9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_nstroutf">
+      <UniqueIdentifier>{cd8e2c2d-b5e8-4cb2-897c-6a55b016a3c5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\_nstd\_nstd.h">
+      <Filter>_nstd</Filter>
+    </ClInclude>
+    <ClInclude Include="source\memoryleak\memoryleak.h">
+      <Filter>memoryleak</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_nstring\_nstring.h">
+      <Filter>_nstring</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_nstring\nscase.h">
+      <Filter>_nstring</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_nstring\nschk.h">
+      <Filter>_nstring</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_nstring\nsconv.h">
+      <Filter>_nstring</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_nstring\nsedit.h">
+      <Filter>_nstring</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_nstring\nstok.h">
+      <Filter>_nstring</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_nstring\nston.h">
+      <Filter>_nstring</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_nstring\nstox.h">
+      <Filter>_nstring</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_nstring\nstring.h">
+      <Filter>_nstring</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_nstring\nstrlen.h">
+      <Filter>_nstring</Filter>
+    </ClInclude>
+    <ClInclude Include="source\actualkeycodes\actualkeycodes.h">
+      <Filter>actualkeycodes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\algorithm\algorithm.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="source\benchmark\benchmark.h">
+      <Filter>benchmark</Filter>
+    </ClInclude>
+    <ClInclude Include="source\bittool\bittool.h">
+      <Filter>bittool</Filter>
+    </ClInclude>
+    <ClInclude Include="source\callfunclog\callfunclog.h">
+      <Filter>callfunclog</Filter>
+    </ClInclude>
+    <ClInclude Include="source\comtool\comtool.h">
+      <Filter>comtool</Filter>
+    </ClInclude>
+    <ClInclude Include="source\consoletool\consoletool.h">
+      <Filter>consoletool</Filter>
+    </ClInclude>
+    <ClInclude Include="source\dbmssql\dbmssql.h">
+      <Filter>dbmssql</Filter>
+    </ClInclude>
+    <ClInclude Include="source\dbsqlite\dbsqlite.h">
+      <Filter>dbsqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="source\dbstore\dbstore.h">
+      <Filter>dbstore</Filter>
+    </ClInclude>
+    <ClInclude Include="source\debugtool\debugtool.h">
+      <Filter>debugtool</Filter>
+    </ClInclude>
+    <ClInclude Include="source\filetool\filetool.h">
+      <Filter>filetool</Filter>
+    </ClInclude>
+    <ClInclude Include="source\flagcontrol\flagcontrol.h">
+      <Filter>flagcontrol</Filter>
+    </ClInclude>
+    <ClInclude Include="source\flowrecord\flowrecord.h">
+      <Filter>flowrecord</Filter>
+    </ClInclude>
+    <ClInclude Include="source\inifile\inifile.h">
+      <Filter>inifile</Filter>
+    </ClInclude>
+    <ClInclude Include="source\mathtool\mathtool.h">
+      <Filter>mathtool</Filter>
+    </ClInclude>
+    <ClInclude Include="source\memorytool\memorytool.h">
+      <Filter>memorytool</Filter>
+    </ClInclude>
+    <ClInclude Include="source\progress\progress.h">
+      <Filter>progress</Filter>
+    </ClInclude>
+    <ClInclude Include="source\systemtool\systemtool.h">
+      <Filter>systemtool</Filter>
+    </ClInclude>
+    <ClInclude Include="source\threadlock\threadlock.h">
+      <Filter>threadlock</Filter>
+    </ClInclude>
+    <ClInclude Include="source\threadobj\threadobj.h">
+      <Filter>threadobj</Filter>
+    </ClInclude>
+    <ClInclude Include="source\whandle\whandle.h">
+      <Filter>whandle</Filter>
+    </ClInclude>
+    <ClInclude Include="source\windowstool\windowstool.h">
+      <Filter>windowstool</Filter>
+    </ClInclude>
+    <ClInclude Include="source\windowstool\heaplist.h">
+      <Filter>windowstool\heaplist</Filter>
+    </ClInclude>
+    <ClInclude Include="source\windowstool\modulelist.h">
+      <Filter>windowstool\modulelist</Filter>
+    </ClInclude>
+    <ClInclude Include="source\windowstool\proclist.h">
+      <Filter>windowstool\proclist</Filter>
+    </ClInclude>
+    <ClInclude Include="source\windowstool\threadlist.h">
+      <Filter>windowstool\threadlist</Filter>
+    </ClInclude>
+    <ClInclude Include="source\windowstool\winlist.h">
+      <Filter>windowstool\winlist</Filter>
+    </ClInclude>
+    <ClInclude Include="source\json\json.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="source\formtable\formtable.h">
+      <Filter>formtable</Filter>
+    </ClInclude>
+    <ClInclude Include="source\console\console.h">
+      <Filter>console</Filter>
+    </ClInclude>
+    <ClInclude Include="source\consoleargv\consoleargv.h">
+      <Filter>consoleargv</Filter>
+    </ClInclude>
+    <ClInclude Include="source\taskinterval\taskinterval.h">
+      <Filter>taskinterval</Filter>
+    </ClInclude>
+    <ClInclude Include="source\taskschedule\taskschedule.h">
+      <Filter>taskschedule</Filter>
+    </ClInclude>
+    <ClInclude Include="source\xsocket\xsocket.h">
+      <Filter>xsocket</Filter>
+    </ClInclude>
+    <ClInclude Include="source\xsocket\xapi.h">
+      <Filter>xsocket\0.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\xsocket\xerror.h">
+      <Filter>xsocket\0.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\xsocket\xlistconnect.h">
+      <Filter>xsocket\0.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\xsocket\xlistnotice.h">
+      <Filter>xsocket\0.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\xsocket\xlistoverlapped.h">
+      <Filter>xsocket\0.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\xsocket\xlistrecv.h">
+      <Filter>xsocket\0.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\xsocket\xlistsend.h">
+      <Filter>xsocket\0.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\xsocket\xlistunit.h">
+      <Filter>xsocket\0.kernal</Filter>
+    </ClInclude>
+    <ClInclude Include="source\xsocket\xserver.h">
+      <Filter>xsocket\1.server</Filter>
+    </ClInclude>
+    <ClInclude Include="source\xsocket\xclient.h">
+      <Filter>xsocket\2.client</Filter>
+    </ClInclude>
+    <ClInclude Include="source\ipdata\ipdata.h">
+      <Filter>ipdata</Filter>
+    </ClInclude>
+    <ClInclude Include="source\argument\argument.h">
+      <Filter>argument</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_nstderr\_nstderr.h">
+      <Filter>_nstderr</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_nstderr\errorbase.h">
+      <Filter>_nstderr</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_nstderr\errornstd.h">
+      <Filter>_nstderr</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_nstderr\errorwin.h">
+      <Filter>_nstderr</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_nstderr\noutput.h">
+      <Filter>_nstderr</Filter>
+    </ClInclude>
+    <ClInclude Include="source\dbmysql\dbmysql.h">
+      <Filter>dbmysql</Filter>
+    </ClInclude>
+    <ClInclude Include="source\curl\curl.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="source\curl\curlbase.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="source\curl\curlmeta.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="source\curl\curlmulti.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="source\xmlstring\xmlstring.h">
+      <Filter>xmlstring</Filter>
+    </ClInclude>
+    <ClInclude Include="source\dbase\dbase.h">
+      <Filter>dbase</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_ntime\_ntime.h">
+      <Filter>_ntime</Filter>
+    </ClInclude>
+    <ClInclude Include="source\base64\base64.h">
+      <Filter>base64</Filter>
+    </ClInclude>
+    <ClInclude Include="source\crashrpt\crashrpt.h">
+      <Filter>crashrpt</Filter>
+    </ClInclude>
+    <ClInclude Include="source\hashx\crc32.h">
+      <Filter>hashx</Filter>
+    </ClInclude>
+    <ClInclude Include="source\hashx\hash.h">
+      <Filter>hashx</Filter>
+    </ClInclude>
+    <ClInclude Include="source\hashx\hashx.h">
+      <Filter>hashx</Filter>
+    </ClInclude>
+    <ClInclude Include="source\hashx\keccak.h">
+      <Filter>hashx</Filter>
+    </ClInclude>
+    <ClInclude Include="source\hashx\md5.h">
+      <Filter>hashx</Filter>
+    </ClInclude>
+    <ClInclude Include="source\hashx\sha1.h">
+      <Filter>hashx</Filter>
+    </ClInclude>
+    <ClInclude Include="source\hashx\sha3.h">
+      <Filter>hashx</Filter>
+    </ClInclude>
+    <ClInclude Include="source\hashx\sha256.h">
+      <Filter>hashx</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_nstroutf\_nstroutf.h">
+      <Filter>_nstroutf</Filter>
+    </ClInclude>
+    <ClInclude Include="source\_nstring\nsfind.h">
+      <Filter>_nstring</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\memoryleak\memoryleak.cpp">
+      <Filter>memoryleak</Filter>
+    </ClCompile>
+    <ClCompile Include="source\_nstring\nscase.cpp">
+      <Filter>_nstring</Filter>
+    </ClCompile>
+    <ClCompile Include="source\_nstring\nschk.cpp">
+      <Filter>_nstring</Filter>
+    </ClCompile>
+    <ClCompile Include="source\_nstring\nsconv.cpp">
+      <Filter>_nstring</Filter>
+    </ClCompile>
+    <ClCompile Include="source\_nstring\nsedit.cpp">
+      <Filter>_nstring</Filter>
+    </ClCompile>
+    <ClCompile Include="source\_nstring\nstok.cpp">
+      <Filter>_nstring</Filter>
+    </ClCompile>
+    <ClCompile Include="source\_nstring\nston.cpp">
+      <Filter>_nstring</Filter>
+    </ClCompile>
+    <ClCompile Include="source\_nstring\nstox.cpp">
+      <Filter>_nstring</Filter>
+    </ClCompile>
+    <ClCompile Include="source\_nstring\nstringa.cpp">
+      <Filter>_nstring</Filter>
+    </ClCompile>
+    <ClCompile Include="source\_nstring\nstringw.cpp">
+      <Filter>_nstring</Filter>
+    </ClCompile>
+    <ClCompile Include="source\_nstring\nstrlen.cpp">
+      <Filter>_nstring</Filter>
+    </ClCompile>
+    <ClCompile Include="source\actualkeycodes\actualkeycodes.cpp">
+      <Filter>actualkeycodes</Filter>
+    </ClCompile>
+    <ClCompile Include="source\benchmark\benchmark.cpp">
+      <Filter>benchmark</Filter>
+    </ClCompile>
+    <ClCompile Include="source\bittool\bittool.cpp">
+      <Filter>bittool</Filter>
+    </ClCompile>
+    <ClCompile Include="source\callfunclog\callfunclog.cpp">
+      <Filter>callfunclog</Filter>
+    </ClCompile>
+    <ClCompile Include="source\consoletool\consoletool.cpp">
+      <Filter>consoletool</Filter>
+    </ClCompile>
+    <ClCompile Include="source\dbmssql\dbmssql.cpp">
+      <Filter>dbmssql</Filter>
+    </ClCompile>
+    <ClCompile Include="source\dbsqlite\dbsqlite.cpp">
+      <Filter>dbsqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="source\dbstore\dbstore.cpp">
+      <Filter>dbstore</Filter>
+    </ClCompile>
+    <ClCompile Include="source\debugtool\debugtool.cpp">
+      <Filter>debugtool</Filter>
+    </ClCompile>
+    <ClCompile Include="source\filetool\filetool.cpp">
+      <Filter>filetool</Filter>
+    </ClCompile>
+    <ClCompile Include="source\flagcontrol\flagcontrol.cpp">
+      <Filter>flagcontrol</Filter>
+    </ClCompile>
+    <ClCompile Include="source\flowrecord\flowrecord.cpp">
+      <Filter>flowrecord</Filter>
+    </ClCompile>
+    <ClCompile Include="source\inifile\inifile.cpp">
+      <Filter>inifile</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mathtool\mathtool.cpp">
+      <Filter>mathtool</Filter>
+    </ClCompile>
+    <ClCompile Include="source\memorytool\memorytool.cpp">
+      <Filter>memorytool</Filter>
+    </ClCompile>
+    <ClCompile Include="source\progress\progress.cpp">
+      <Filter>progress</Filter>
+    </ClCompile>
+    <ClCompile Include="source\systemtool\systemtool.cpp">
+      <Filter>systemtool</Filter>
+    </ClCompile>
+    <ClCompile Include="source\threadlock\threadlock.cpp">
+      <Filter>threadlock</Filter>
+    </ClCompile>
+    <ClCompile Include="source\threadobj\threadobj.cpp">
+      <Filter>threadobj</Filter>
+    </ClCompile>
+    <ClCompile Include="source\whandle\whandle.cpp">
+      <Filter>whandle</Filter>
+    </ClCompile>
+    <ClCompile Include="source\windowstool\heaplist.cpp">
+      <Filter>windowstool\heaplist</Filter>
+    </ClCompile>
+    <ClCompile Include="source\windowstool\modulelist.cpp">
+      <Filter>windowstool\modulelist</Filter>
+    </ClCompile>
+    <ClCompile Include="source\windowstool\proclist.cpp">
+      <Filter>windowstool\proclist</Filter>
+    </ClCompile>
+    <ClCompile Include="source\windowstool\threadlist.cpp">
+      <Filter>windowstool\threadlist</Filter>
+    </ClCompile>
+    <ClCompile Include="source\windowstool\winlist.cpp">
+      <Filter>windowstool\winlist</Filter>
+    </ClCompile>
+    <ClCompile Include="source\json\json.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="source\formtable\formtable.cpp">
+      <Filter>formtable</Filter>
+    </ClCompile>
+    <ClCompile Include="source\console\console.cpp">
+      <Filter>console</Filter>
+    </ClCompile>
+    <ClCompile Include="source\consoleargv\consoleargv.cpp">
+      <Filter>consoleargv</Filter>
+    </ClCompile>
+    <ClCompile Include="source\taskinterval\taskinterval.cpp">
+      <Filter>taskinterval</Filter>
+    </ClCompile>
+    <ClCompile Include="source\taskschedule\taskschedule.cpp">
+      <Filter>taskschedule</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xapi.cpp">
+      <Filter>xsocket\0.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xerror.cpp">
+      <Filter>xsocket\0.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xlistconnect.cpp">
+      <Filter>xsocket\0.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xlistnotice.cpp">
+      <Filter>xsocket\0.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xlistoverlapped.cpp">
+      <Filter>xsocket\0.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xlistrecv.cpp">
+      <Filter>xsocket\0.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xlistsend.cpp">
+      <Filter>xsocket\0.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xlistunit.cpp">
+      <Filter>xsocket\0.kernal</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xserver.cpp">
+      <Filter>xsocket\1.server</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xserveraccept.cpp">
+      <Filter>xsocket\1.server</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xserverkernal.cpp">
+      <Filter>xsocket\1.server</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xservernotice.cpp">
+      <Filter>xsocket\1.server</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xserverprocess.cpp">
+      <Filter>xsocket\1.server</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xserverrecv.cpp">
+      <Filter>xsocket\1.server</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xserversend.cpp">
+      <Filter>xsocket\1.server</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xserverthread.cpp">
+      <Filter>xsocket\1.server</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xclient.cpp">
+      <Filter>xsocket\2.client</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xclientconnect.cpp">
+      <Filter>xsocket\2.client</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xclientkernal.cpp">
+      <Filter>xsocket\2.client</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xclientnotice.cpp">
+      <Filter>xsocket\2.client</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xclientprocess.cpp">
+      <Filter>xsocket\2.client</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xclientrecv.cpp">
+      <Filter>xsocket\2.client</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xclientsend.cpp">
+      <Filter>xsocket\2.client</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xsocket\xclientthread.cpp">
+      <Filter>xsocket\2.client</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ipdata\ipdata.cpp">
+      <Filter>ipdata</Filter>
+    </ClCompile>
+    <ClCompile Include="source\argument\argument.cpp">
+      <Filter>argument</Filter>
+    </ClCompile>
+    <ClCompile Include="source\_nstderr\errorbase.cpp">
+      <Filter>_nstderr</Filter>
+    </ClCompile>
+    <ClCompile Include="source\_nstderr\errornstd.cpp">
+      <Filter>_nstderr</Filter>
+    </ClCompile>
+    <ClCompile Include="source\_nstderr\errorwin.cpp">
+      <Filter>_nstderr</Filter>
+    </ClCompile>
+    <ClCompile Include="source\_nstderr\noutput.cpp">
+      <Filter>_nstderr</Filter>
+    </ClCompile>
+    <ClCompile Include="source\dbmysql\dbmysql.cpp">
+      <Filter>dbmysql</Filter>
+    </ClCompile>
+    <ClCompile Include="source\curl\curlbase.cpp">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="source\curl\curlmeta.cpp">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="source\curl\curlmulti.cpp">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="source\xmlstring\xmlstring.cpp">
+      <Filter>xmlstring</Filter>
+    </ClCompile>
+    <ClCompile Include="source\dbase\dbase.cpp">
+      <Filter>dbase</Filter>
+    </ClCompile>
+    <ClCompile Include="source\_ntime\_ntime.cpp">
+      <Filter>_ntime</Filter>
+    </ClCompile>
+    <ClCompile Include="source\base64\base64.cpp">
+      <Filter>base64</Filter>
+    </ClCompile>
+    <ClCompile Include="source\hashx\crc32.cpp">
+      <Filter>hashx</Filter>
+    </ClCompile>
+    <ClCompile Include="source\hashx\digest.cpp">
+      <Filter>hashx</Filter>
+    </ClCompile>
+    <ClCompile Include="source\hashx\keccak.cpp">
+      <Filter>hashx</Filter>
+    </ClCompile>
+    <ClCompile Include="source\hashx\md5.cpp">
+      <Filter>hashx</Filter>
+    </ClCompile>
+    <ClCompile Include="source\hashx\sha1.cpp">
+      <Filter>hashx</Filter>
+    </ClCompile>
+    <ClCompile Include="source\hashx\sha3.cpp">
+      <Filter>hashx</Filter>
+    </ClCompile>
+    <ClCompile Include="source\hashx\sha256.cpp">
+      <Filter>hashx</Filter>
+    </ClCompile>
+    <ClCompile Include="source\_nstroutf\_nstroutf.cpp">
+      <Filter>_nstroutf</Filter>
+    </ClCompile>
+    <ClCompile Include="source\_nstring\nsfind.cpp">
+      <Filter>_nstring</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
