@@ -13,7 +13,7 @@ C_XPoint::C_XPoint(IN const void *data, IN unsigned long size) : m_pData(data), 
 //-----------------------------------------------------------------------------
 C_XPoint::~C_XPoint() {}
 //-----------------------------------------------------------------------------
-// ¨ú±o¸ê®Æ«ü¼Ğ«á, ²¾°Ê«ü¼Ğ¦ì¸m
+// å–å¾—è³‡æ–™æŒ‡æ¨™å¾Œ, ç§»å‹•æŒ‡æ¨™ä½ç½®
 const void *C_XPoint::Offset(IN unsigned long ulOfs)
 {
 	const void *pData = reinterpret_cast<const void *>(reinterpret_cast<const char *>(m_pData) + m_ulPoint);
@@ -24,19 +24,19 @@ const void *C_XPoint::Offset(IN unsigned long ulOfs)
 	return pData;
 }
 //-----------------------------------------------------------------------------
-// ¨ú±o¸ê®Æªø«×
+// å–å¾—è³‡æ–™é•·åº¦
 unsigned long C_XPoint::Size() const
 {
 	return m_ulSize;
 }
 //-----------------------------------------------------------------------------
-// ¨ú±o³Ñ¾lªø«×
+// å–å¾—å‰©é¤˜é•·åº¦
 unsigned long C_XPoint::Less() const
 {
 	return m_ulSize > m_ulPoint ? m_ulSize - m_ulPoint : 0;
 }
 //-----------------------------------------------------------------------------
-// ÀË¬d¬O§_µ²§ô
+// æª¢æŸ¥æ˜¯å¦çµæŸ
 bool C_XPoint::IsOver() const
 {
 	return m_ulPoint >= m_ulSize;
@@ -46,16 +46,16 @@ C_XAPI::C_XAPI() : m_pfGetAcceptExSockAddrs(nullptr), m_pfAcceptEx(nullptr), m_p
 //-----------------------------------------------------------------------------
 C_XAPI::~C_XAPI() {}
 //-----------------------------------------------------------------------------
-// ªì©l¤Æ
+// åˆå§‹åŒ–
 bool C_XAPI::Initialize()
 {
-	SOCKET Socket = WSASocket(AF_INET, SOCK_STREAM, IPPROTO_TCP, nullptr, 0, WSA_FLAG_OVERLAPPED); // «Ø¥ß¤@­Óµ¹¸ü¤JÂX¥RWinsock¨ç¦¡¨Ï¥ÎªºSocketID
+	SOCKET Socket = WSASocket(AF_INET, SOCK_STREAM, IPPROTO_TCP, nullptr, 0, WSA_FLAG_OVERLAPPED); // å»ºç«‹ä¸€å€‹çµ¦è¼‰å…¥æ“´å……Winsockå‡½å¼ä½¿ç”¨çš„SocketID
 
-	// ¦pªG¨S«Ø¥ß¦¨¥\´N¥¢±Ñ¤F
+	// å¦‚æœæ²’å»ºç«‹æˆåŠŸå°±å¤±æ•—äº†
 	if(Socket == INVALID_SOCKET)
 		return C_NOutput::Instance().Error(ERRORNSTD, C_ErrorWSA(), __T("create socket failed"));
 
-	// ¸ü¤JAccept¨ç¦¡
+	// è¼‰å…¥Acceptå‡½å¼
 	{
 		GUID Guid = WSAID_ACCEPTEX;
 
@@ -63,7 +63,7 @@ bool C_XAPI::Initialize()
 			return C_NOutput::Instance().Error(ERRORNSTD, __T("load function failed(AcceptEx)"));
 	}
 
-	// ¸ü¤JConnect¨ç¦¡
+	// è¼‰å…¥Connectå‡½å¼
 	{
 		GUID Guid = WSAID_CONNECTEX;
 
@@ -71,7 +71,7 @@ bool C_XAPI::Initialize()
 			return C_NOutput::Instance().Error(ERRORNSTD, __T("load function failed(ConnectEx)"));
 	}
 
-	// ¸ü¤JDisconnect¨ç¦¡
+	// è¼‰å…¥Disconnectå‡½å¼
 	{
 		GUID Guid = WSAID_DISCONNECTEX;
 
@@ -79,7 +79,7 @@ bool C_XAPI::Initialize()
 			return C_NOutput::Instance().Error(ERRORNSTD, __T("load function failed(DisconnectEx)"));
 	}
 
-	// ¸ü¤JGetAcceptSockAddr¨ç¦¡
+	// è¼‰å…¥GetAcceptSockAddrå‡½å¼
 	{
 		GUID Guid = WSAID_GETACCEPTEXSOCKADDRS;
 
@@ -93,7 +93,7 @@ bool C_XAPI::Initialize()
 	return true;
 }
 //-----------------------------------------------------------------------------
-// ¸ü¤JÂX¥RWinsock¨ç¦¡
+// è¼‰å…¥æ“´å……Winsockå‡½å¼
 bool C_XAPI::LoadWSAExtensionFunction(IN SOCKET Socket, IN GUID nFunction, OUT void *&pFunction)
 {
 	if(Socket == INVALID_SOCKET)
@@ -101,28 +101,28 @@ bool C_XAPI::LoadWSAExtensionFunction(IN SOCKET Socket, IN GUID nFunction, OUT v
 
 	unsigned long ulBytes = 0;
 
-	// ¸ü¤JÂX¥RWinsock¨ç¦¡
+	// è¼‰å…¥æ“´å……Winsockå‡½å¼
 	if(WSAIoctl(Socket, SIO_GET_EXTENSION_FUNCTION_POINTER, &nFunction, sizeof(nFunction), &pFunction, sizeof(pFunction), &ulBytes, nullptr, nullptr) == SOCKET_ERROR)
 		return C_NOutput::Instance().Error(ERRORNSTD, C_ErrorWSA(), __T("WSAIoctl failed"));
 
 	return true;
 }
 //-----------------------------------------------------------------------------
-// ¨ú±o¤u§@°õ¦æºü¼Æ¶q
+// å–å¾—å·¥ä½œåŸ·è¡Œç·’æ•¸é‡
 unsigned long C_XAPI::WorkThreads()
 {
 #ifdef XSOCKET_DEBUG
-	return 1; // °£¿ù¼Ò¦¡¤U¥u¥Î¤@­Ó°õ¦æºü
+	return 1; // é™¤éŒ¯æ¨¡å¼ä¸‹åªç”¨ä¸€å€‹åŸ·è¡Œç·’
 #else
 	SYSTEM_INFO sSysInfo;
 
-	GetSystemInfo(&sSysInfo); // ¨ú±o¨t²Î¸ê°T
+	GetSystemInfo(&sSysInfo); // å–å¾—ç³»çµ±è³‡è¨Š
 
-	return sSysInfo.dwNumberOfProcessors * 2 + 2; // ¦øªA¾¹ºİ¨Ì·Ó·L³n±ÀÂË¬°³B²z¾¹¼Æ¶q * 2 + 2
+	return sSysInfo.dwNumberOfProcessors * 2 + 2; // ä¼ºæœå™¨ç«¯ä¾ç…§å¾®è»Ÿæ¨è–¦ç‚ºè™•ç†å™¨æ•¸é‡ * 2 + 2
 #endif
 }
 //-----------------------------------------------------------------------------
-// ¤À¿ë¦ì§}¦r¦ê¬O¤å¼Æ¦r¦ì§}ÁÙ¬Oºô¸ô¦WºÙ¦ì§}
+// åˆ†è¾¨ä½å€å­—ä¸²æ˜¯æ–‡æ•¸å­—ä½å€é‚„æ˜¯ç¶²è·¯åç¨±ä½å€
 unsigned long C_XAPI::ParseAddr(IN const nstring &szIP)
 {
 	for(const nstring::value_type &Itor : szIP)
@@ -139,25 +139,25 @@ unsigned long C_XAPI::ParseAddr(IN const nstring &szIP)
 	return AI_NUMERICHOST;
 }
 //-----------------------------------------------------------------------------
-// «Ø¥ßIOCompletionPort
+// å»ºç«‹IOCompletionPort
 bool C_XAPI::CreateIOCompletionPort(IN unsigned long ulThreads, OUT HANDLE &hIOCP)
 {
 	return (hIOCP = CreateIoCompletionPort(INVALID_HANDLE_VALUE, nullptr, 0, ulThreads)) != INVALID_HANDLE_VALUE ? true : C_NOutput::Instance().Error(ERRORNSTD, C_ErrorWin(), __T("create iocp failed"));
 }
 //-----------------------------------------------------------------------------
-// ±NSocketID»PIOCompletionPortÃöÁp°_¨Ó
+// å°‡SocketIDèˆ‡IOCompletionPorté—œè¯èµ·ä¾†
 bool C_XAPI::AssociateIOCompletionPort(IN HANDLE hIOCP, IN SOCKET Socket, IN unsigned long ulValue)
 {
-	return CreateIoCompletionPort(reinterpret_cast<HANDLE>(Socket), hIOCP, ulValue, 0) == hIOCP; // ¤£»İ­nÅã¥Ü¿ù»~°T®§, ¦]¬°³o®É­Ôªº¿ù»~¥i¥H³Q©¿²¤
+	return CreateIoCompletionPort(reinterpret_cast<HANDLE>(Socket), hIOCP, ulValue, 0) == hIOCP; // ä¸éœ€è¦é¡¯ç¤ºéŒ¯èª¤è¨Šæ¯, å› ç‚ºé€™æ™‚å€™çš„éŒ¯èª¤å¯ä»¥è¢«å¿½ç•¥
 }
 //-----------------------------------------------------------------------------
-// ÄÀ©ñIOCompletionPort
+// é‡‹æ”¾IOCompletionPort
 bool C_XAPI::ReleaseIOCompletionPort(IN HANDLE hIOCP)
 {
-	return CloseHandle(hIOCP) != FALSE; // ¤£»İ­nÅã¥Ü¿ù»~°T®§, ¦]¬°³o®É­Ôªº¿ù»~¥i¥H³Q©¿²¤
+	return CloseHandle(hIOCP) != FALSE; // ä¸éœ€è¦é¡¯ç¤ºéŒ¯èª¤è¨Šæ¯, å› ç‚ºé€™æ™‚å€™çš„éŒ¯èª¤å¯ä»¥è¢«å¿½ç•¥
 }
 //-----------------------------------------------------------------------------
-// ¨ú±o¦ì§}µ²ºc
+// å–å¾—ä½å€çµæ§‹
 bool C_XAPI::GetHostAddrInfo(IN const C_IPData &ccIPData, OUT S_XAddr &sAddr)
 {
 	ADDRINFOT sHint, *pAddr = nullptr, *pTemp = nullptr;
@@ -168,17 +168,17 @@ bool C_XAPI::GetHostAddrInfo(IN const C_IPData &ccIPData, OUT S_XAddr &sAddr)
 	sHint.ai_socktype = SOCK_STREAM;
 	sHint.ai_protocol = IPPROTO_TCP;
 
-	// ¨ú±o¦ì§}¸ê°T
+	// å–å¾—ä½å€è³‡è¨Š
 	if(GetAddrInfo(ccIPData.IP().c_str(), ntox(ccIPData.Port(), 10).c_str(), &sHint, &pAddr) != 0)
 		return C_NOutput::Instance().Error(ERRORNSTD, C_ErrorWSA(), __T("get addrinfo failed"));
 
-	// ¦pªGµ²ªG¬°nullptr, ´Nµ²§ô¤F
+	// å¦‚æœçµæœç‚ºnullptr, å°±çµæŸäº†
 	if(pAddr == nullptr)
 		return C_NOutput::Instance().Error(ERRORNSTD, __T("addrinfo null"));
 
-	// ´`Àô¨ú±o¦ì§}¸ê®Æ, ¥Ñ©ó¤@­Ó¹q¸£¥i¯à¦³¦h±iºô¥d, ©Ò¥H¥i¯à·|¨ú±o¦h­Ó¦ì§}¸ê°T
-	// ¦ı¦b³o¸Ì¥u¨ú¥Î²Å¦X«ü©wªºIPÃş«¬, SocketÃş«¬, ³q°T¨ó©wÃş«¬ªº¦ì§}¸ê°T
-	// ¦ı¦pªG¦³¦n´X­Ó¦ì§}¸ê°T³£²Å¦Xªº¸Ü, ´N·|¨ú±o³Ì«á¤@­Ó²Å¦Xªº¦ì§}¸ê°T
+	// å¾ªç’°å–å¾—ä½å€è³‡æ–™, ç”±æ–¼ä¸€å€‹é›»è…¦å¯èƒ½æœ‰å¤šå¼µç¶²å¡, æ‰€ä»¥å¯èƒ½æœƒå–å¾—å¤šå€‹ä½å€è³‡è¨Š
+	// ä½†åœ¨é€™è£¡åªå–ç”¨ç¬¦åˆæŒ‡å®šçš„IPé¡å‹, Socketé¡å‹, é€šè¨Šå”å®šé¡å‹çš„ä½å€è³‡è¨Š
+	// ä½†å¦‚æœæœ‰å¥½å¹¾å€‹ä½å€è³‡è¨Šéƒ½ç¬¦åˆçš„è©±, å°±æœƒå–å¾—æœ€å¾Œä¸€å€‹ç¬¦åˆçš„ä½å€è³‡è¨Š
 	pTemp = pAddr;
 
 	while(pTemp)
@@ -195,12 +195,12 @@ bool C_XAPI::GetHostAddrInfo(IN const C_IPData &ccIPData, OUT S_XAddr &sAddr)
 		pTemp = pTemp->ai_next;
 	}//while
 
-	FreeAddrInfo(pAddr); // ÄÀ©ñ¦ì§}¸ê°T
+	FreeAddrInfo(pAddr); // é‡‹æ”¾ä½å€è³‡è¨Š
 
 	return true;
 }
 //-----------------------------------------------------------------------------
-// ¨ú±o¸j©w¦ì§}µ²ºc
+// å–å¾—ç¶å®šä½å€çµæ§‹
 bool C_XAPI::GetBindAddrInfo(OUT S_XAddr &sAddr)
 {
 	ADDRINFOT sHint, *pAddr = nullptr, *pTemp = nullptr;
@@ -211,17 +211,17 @@ bool C_XAPI::GetBindAddrInfo(OUT S_XAddr &sAddr)
 	sHint.ai_socktype = SOCK_STREAM;
 	sHint.ai_protocol = IPPROTO_TCP;
 
-	// ¨ú±o¦ì§}¸ê°T
+	// å–å¾—ä½å€è³‡è¨Š
 	if(GetAddrInfo(nullptr, __T("0"), &sHint, &pAddr) != 0)
 		return C_NOutput::Instance().Error(ERRORNSTD, C_ErrorWSA(), __T("get addrinfo failed"));
 
-	// ¦pªGµ²ªG¬°nullptr, ´Nµ²§ô¤F
+	// å¦‚æœçµæœç‚ºnullptr, å°±çµæŸäº†
 	if(pAddr == nullptr)
 		return C_NOutput::Instance().Error(ERRORNSTD, __T("addrinfo null"));
 
-	// ´`Àô¨ú±o¦ì§}¸ê®Æ, ¥Ñ©ó¤@­Ó¹q¸£¥i¯à¦³¦h±iºô¥d, ©Ò¥H¥i¯à·|¨ú±o¦h­Ó¦ì§}¸ê°T
-	// ¦ı¦b³o¸Ì¥u¨ú¥Î²Å¦X«ü©wªºIPÃş«¬, SocketÃş«¬, ³q°T¨ó©wÃş«¬ªº¦ì§}¸ê°T
-	// ¦ı¦pªG¦³¦n´X­Ó¦ì§}¸ê°T³£²Å¦Xªº¸Ü, ´N·|¨ú±o³Ì«á¤@­Ó²Å¦Xªº¦ì§}¸ê°T
+	// å¾ªç’°å–å¾—ä½å€è³‡æ–™, ç”±æ–¼ä¸€å€‹é›»è…¦å¯èƒ½æœ‰å¤šå¼µç¶²å¡, æ‰€ä»¥å¯èƒ½æœƒå–å¾—å¤šå€‹ä½å€è³‡è¨Š
+	// ä½†åœ¨é€™è£¡åªå–ç”¨ç¬¦åˆæŒ‡å®šçš„IPé¡å‹, Socketé¡å‹, é€šè¨Šå”å®šé¡å‹çš„ä½å€è³‡è¨Š
+	// ä½†å¦‚æœæœ‰å¥½å¹¾å€‹ä½å€è³‡è¨Šéƒ½ç¬¦åˆçš„è©±, å°±æœƒå–å¾—æœ€å¾Œä¸€å€‹ç¬¦åˆçš„ä½å€è³‡è¨Š
 	pTemp = pAddr;
 
 	while(pTemp)
@@ -238,25 +238,27 @@ bool C_XAPI::GetBindAddrInfo(OUT S_XAddr &sAddr)
 		pTemp = pTemp->ai_next;
 	}//while
 
-	FreeAddrInfo(pAddr); // ÄÀ©ñ¦ì§}¸ê°T
+	FreeAddrInfo(pAddr); // é‡‹æ”¾ä½å€è³‡è¨Š
 
 	return true;
 }
 //-----------------------------------------------------------------------------
-// «Ø¥ßSocketID
+// å»ºç«‹SocketID
 bool C_XAPI::CreateSocket(IN const S_XAddr &sAddr, OUT SOCKET &Socket)
 {
-	// «Ø¥ß±a¦³­«Å|Äİ©ÊªºSocketID
+	// å»ºç«‹å¸¶æœ‰é‡ç–Šå±¬æ€§çš„SocketID
 	if((Socket = WSASocket(sAddr.iFamily, sAddr.iSockType, sAddr.iProtocol, nullptr, 0, WSA_FLAG_OVERLAPPED)) == INVALID_SOCKET)
 		return C_NOutput::Instance().Error(ERRORNSTD, C_ErrorWSA(), __T("create socket failed"));
 
 	char cValue = 1;
 
-	// Ãö³¬Nagleºtºâªk
+	// é—œé–‰Nagleæ¼”ç®—æ³•
+	// Nagleæ¼”ç®—æ³• : TCPåœ¨å‚³è¼¸æ™‚ç‚ºäº†ç¯€çœé »å¯¬, å› æ­¤æœƒæ¡ç”¨æ­¤æ¼”ç®—æ³•ä¾†å°‡éå°çš„å°åŒ…åˆä½µå¾Œé€å‡º
+	//               ä½†æ˜¯é€™æ¨£åšæ˜¯ä»¥å‚³è¼¸çš„å³æ™‚æ€§åšç‚ºä»£åƒ¹, å› æ­¤åœ¨é‡è¦–å³æ™‚æ€§çš„ç¶²è·¯ç³»çµ±ä¸Š(ä¾‹å¦‚éŠæˆ²ä¼ºæœå™¨)æœƒé—œé–‰æ­¤æ¼”ç®—æ³•
 	if(setsockopt(Socket, IPPROTO_TCP, TCP_NODELAY, &cValue, sizeof(cValue)) == SOCKET_ERROR)
 		return C_NOutput::Instance().Error(ERRORNSTD, C_ErrorWSA(), __T("set socket option failed(TCP_NODELAY)"));
 
-	// ³]©wÂ_½uµ¥«İ®É¶¡
+	// è¨­å®šæ–·ç·šç­‰å¾…æ™‚é–“
 	LINGER sLinger;
 
 	sLinger.l_onoff = 1;
@@ -268,7 +270,7 @@ bool C_XAPI::CreateSocket(IN const S_XAddr &sAddr, OUT SOCKET &Socket)
 	return true;
 }
 //-----------------------------------------------------------------------------
-// ÄÀ©ñSocketID
+// é‡‹æ”¾SocketID
 void C_XAPI::ReleaseSocket(IN SOCKET Socket)
 {
 	if(Socket == INVALID_SOCKET)
@@ -278,7 +280,7 @@ void C_XAPI::ReleaseSocket(IN SOCKET Socket)
 	closesocket(Socket);
 }
 //-----------------------------------------------------------------------------
-// ¸j©wSocketID
+// ç¶å®šSocketID
 bool C_XAPI::BindSocket(IN SOCKET Socket, IN const S_XAddr &sAddr)
 {
 	if(Socket == INVALID_SOCKET)
@@ -290,7 +292,7 @@ bool C_XAPI::BindSocket(IN SOCKET Socket, IN const S_XAddr &sAddr)
 	return true;
 }
 //-----------------------------------------------------------------------------
-// ºÊÅ¥SocketID
+// ç›£è½SocketID
 bool C_XAPI::ListenSocket(IN SOCKET Socket)
 {
 	if(Socket == INVALID_SOCKET)
@@ -302,7 +304,7 @@ bool C_XAPI::ListenSocket(IN SOCKET Socket)
 	return true;
 }
 //-----------------------------------------------------------------------------
-// ¨ú±oSocketIDªº³s½u®É¶¡
+// å–å¾—SocketIDçš„é€£ç·šæ™‚é–“
 bool C_XAPI::GetConnectTime(IN SOCKET Socket, OUT unsigned long &ulTime)
 {
 	unsigned long ulConnectTime;
@@ -326,9 +328,9 @@ bool C_XAPI::Accept(IN SOCKET SocketServer, IN SOCKET Socket, IN void *pBuffer, 
 
 	if(m_pfAcceptEx(SocketServer, Socket, pBuffer, 0, XSOCKET_ADDRLENGTH, XSOCKET_ADDRLENGTH, &ulRecvs, &sOverlapped) == FALSE)
 	{
-		C_ErrorWSA ccWSAError; // ¨ú±oWinsock¿ù»~¥N½X
+		C_ErrorWSA ccWSAError; // å–å¾—WinsockéŒ¯èª¤ä»£ç¢¼
 
-		// ¦pªG¤£¬O±Æ¶¤¤¤, ´Nªí¥Ü¥X¿ù¤F
+		// å¦‚æœä¸æ˜¯æ’éšŠä¸­, å°±è¡¨ç¤ºå‡ºéŒ¯äº†
 		if(ccWSAError != WSA_IO_PENDING)
 			return C_NOutput::Instance().Error(ERRORNSTD, ccWSAError, __T("accept failed"));
 	}//if
@@ -344,9 +346,9 @@ bool C_XAPI::Connect(IN SOCKET Socket, IN const sockaddr *pAddr, IN int iAddrSiz
 
 	if(m_pfConnectEx(Socket, pAddr, iAddrSize, nullptr, 0, nullptr, &sOverlapped) == FALSE)
 	{
-		C_ErrorWSA ccWSAError; // ¨ú±oWinsock¿ù»~¥N½X
+		C_ErrorWSA ccWSAError; // å–å¾—WinsockéŒ¯èª¤ä»£ç¢¼
 
-		// ¦pªG¤£¬O±Æ¶¤¤¤, ´Nªí¥Ü¥X¿ù¤F
+		// å¦‚æœä¸æ˜¯æ’éšŠä¸­, å°±è¡¨ç¤ºå‡ºéŒ¯äº†
 		if(ccWSAError != WSA_IO_PENDING)
 			return C_NOutput::Instance().Error(ERRORNSTD, ccWSAError, __T("connect failed"));
 	}//if
@@ -354,7 +356,7 @@ bool C_XAPI::Connect(IN SOCKET Socket, IN const sockaddr *pAddr, IN int iAddrSiz
 	return true;
 }
 //-----------------------------------------------------------------------------
-// ³]©wAccept§¹²¦«áªºSocketID
+// è¨­å®šAcceptå®Œç•¢å¾Œçš„SocketID
 bool C_XAPI::AcceptContext(IN SOCKET SocketServer, IN SOCKET Socket)
 {
 	if(SocketServer == INVALID_SOCKET)
@@ -369,7 +371,7 @@ bool C_XAPI::AcceptContext(IN SOCKET SocketServer, IN SOCKET Socket)
 	return true;
 }
 //-----------------------------------------------------------------------------
-// ³]©wConnect§¹²¦«áªºSocketID
+// è¨­å®šConnectå®Œç•¢å¾Œçš„SocketID
 bool C_XAPI::ConnectContext(IN SOCKET Socket)
 {
 	if(Socket == INVALID_SOCKET)
@@ -387,19 +389,19 @@ bool C_XAPI::Disconnect(IN SOCKET Socket, IN OVERLAPPED &sOverlapped)
 	if(m_pfDisconnectEx == nullptr)
 		return C_NOutput::Instance().Error(ERRORNSTD, __T("function null"));
 
-	// ¨Æ¹ê¤W³o¸Ì¬O§_»İ­n¥ıshutdown¦ADisconnectEx©O? §Ú¤]¤£²M·¡@@~~
-	// ¥u¬O¥Ø«e³o¼Ë§@½T¹ê¬O¦³®Äªº
-	// ³o¬O¬°¤FÁ×§K·í°õ¦æDisconnectEx«á, ¦pªG«È¤áºİ¤´µM«ùÄò¶Ç°e«Ê¥], «hÂ_½u§¹¦¨ªº³qª¾±N·|¥Ã»·³£¨ì¹F¤£¤F
-	// ¥u­n¦³¥ı©I¥sshutdown¦A©I¥sDisconnectEx, ´N·|¥¿±`¦¬¨ìÂ_½u³qª¾¤F
+	// äº‹å¯¦ä¸Šé€™è£¡æ˜¯å¦éœ€è¦å…ˆshutdownå†DisconnectExå‘¢? æˆ‘ä¹Ÿä¸æ¸…æ¥š@@~~
+	// åªæ˜¯ç›®å‰é€™æ¨£ä½œç¢ºå¯¦æ˜¯æœ‰æ•ˆçš„
+	// é€™æ˜¯ç‚ºäº†é¿å…ç•¶åŸ·è¡ŒDisconnectExå¾Œ, å¦‚æœå®¢æˆ¶ç«¯ä»ç„¶æŒçºŒå‚³é€å°åŒ…, å‰‡æ–·ç·šå®Œæˆçš„é€šçŸ¥å°‡æœƒæ°¸é éƒ½åˆ°é”ä¸äº†
+	// åªè¦æœ‰å…ˆå‘¼å«shutdownå†å‘¼å«DisconnectEx, å°±æœƒæ­£å¸¸æ”¶åˆ°æ–·ç·šé€šçŸ¥äº†
 
 	if(shutdown(Socket, SD_BOTH) == SOCKET_ERROR)
 		return C_NOutput::Instance().Error(ERRORNSTD, C_ErrorWSA(), __T("shutdown failed"));
 
 	if(m_pfDisconnectEx(Socket, &sOverlapped, TF_REUSE_SOCKET, 0) == FALSE)
 	{
-		C_ErrorWSA ccWSAError; // ¨ú±oWinsock¿ù»~¥N½X
+		C_ErrorWSA ccWSAError; // å–å¾—WinsockéŒ¯èª¤ä»£ç¢¼
 
-		// ¦pªG¤£¬O±Æ¶¤¤¤, ´Nªí¥Ü¥X¿ù¤F
+		// å¦‚æœä¸æ˜¯æ’éšŠä¸­, å°±è¡¨ç¤ºå‡ºéŒ¯äº†
 		if(ccWSAError != WSA_IO_PENDING)
 			return C_NOutput::Instance().Error(ERRORNSTD, ccWSAError, __T("disconnect failed"));
 	}//if
@@ -413,12 +415,12 @@ bool C_XAPI::Recv(IN SOCKET Socket, IN WSABUF &sWSABuf, IN OVERLAPPED &sOverlapp
 	unsigned long ulRecvs = 0;
 	unsigned long ulFlags = 0;
 
-	// µo¥XWSARecv©I¥s
+	// ç™¼å‡ºWSARecvå‘¼å«
 	if(WSARecv(Socket, &sWSABuf, 1, &ulRecvs, &ulFlags, &sOverlapped, nullptr) == SOCKET_ERROR)
 	{
-		C_ErrorWSA ccWSAError; // ¨ú±oWinsock¿ù»~¥N½X
+		C_ErrorWSA ccWSAError; // å–å¾—WinsockéŒ¯èª¤ä»£ç¢¼
 
-		// ¦pªG¤£¬O±Æ¶¤¤¤, ´Nªí¥Ü¥X¿ù¤F
+		// å¦‚æœä¸æ˜¯æ’éšŠä¸­, å°±è¡¨ç¤ºå‡ºéŒ¯äº†
 		if(ccWSAError != WSA_IO_PENDING)
 			return C_NOutput::Instance().Error(ERRORNSTD, ccWSAError, __T("recv failed"));
 	}//if
@@ -431,12 +433,12 @@ bool C_XAPI::Send(IN SOCKET Socket, IN WSABUF &sWSABuf, IN OVERLAPPED &sOverlapp
 {
 	unsigned long ulSends = 0;
 
-	// µo¥XWSASend©I¥s
+	// ç™¼å‡ºWSASendå‘¼å«
 	if(WSASend(Socket, &sWSABuf, 1, &ulSends, 0, &sOverlapped, nullptr) == SOCKET_ERROR)
 	{
-		C_ErrorWSA ccWSAError; // ¨ú±oWinsock¿ù»~¥N½X
+		C_ErrorWSA ccWSAError; // å–å¾—WinsockéŒ¯èª¤ä»£ç¢¼
 
-		// ¦pªG¤£¬O±Æ¶¤¤¤, ´Nªí¥Ü¥X¿ù¤F
+		// å¦‚æœä¸æ˜¯æ’éšŠä¸­, å°±è¡¨ç¤ºå‡ºéŒ¯äº†
 		if(ccWSAError != WSA_IO_PENDING)
 			return C_NOutput::Instance().Error(ERRORNSTD, ccWSAError, __T("send failed"));
 	}//if
@@ -455,16 +457,16 @@ bool C_XAPI::GetAcceptSockAddr(IN void *pBuffer, IN sockaddr &sAddrServer, IN so
 	int iAddrServers = 0;
 	int iAddrClients = 0;
 
-	// ¸ÑªR¥X¦ì§}µ²ºc
+	// è§£æå‡ºä½å€çµæ§‹
 	m_pfGetAcceptExSockAddrs(pBuffer, 0, XSOCKET_ADDRLENGTH, XSOCKET_ADDRLENGTH, &pAddrServer, &iAddrServers, &pAddrClient, &iAddrClients);
-	// ½Æ»s¦ì§}µ²ºc
+	// è¤‡è£½ä½å€çµæ§‹
 	sAddrServer = *pAddrServer;
 	sAddrClient = *pAddrClient;
 
 	return true;
 }
 //-----------------------------------------------------------------------------
-// ªì©l¤ÆWinsock
+// åˆå§‹åŒ–Winsock
 bool XSocketInitialize(IN WSADATA *pWSAData)
 {
 	WSADATA sWSAData;
@@ -479,7 +481,7 @@ bool XSocketInitialize(IN WSADATA *pWSAData)
 	return ccWSAError == WSASUCCESS ? true : C_NOutput::Instance().Error(ERRORNSTD, ccWSAError, __T("initilize wsasocket failed"));
 }
 //-----------------------------------------------------------------------------
-// ÄÀ©ñWinsock
+// é‡‹æ”¾Winsock
 void XSocketRelease()
 {
 	WSACleanup();
